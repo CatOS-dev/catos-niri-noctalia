@@ -202,7 +202,6 @@ spawn-at-startup "dbus-update-activation-environment" "--systemd" "XDG_CURRENT_D
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "noctalia"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-spawn-at-startup "/usr/lib/xdg-desktop-portal" "-r"
 spawn-at-startup "xwayland-satellite"
 
 // Include noctalia configuration fragments.

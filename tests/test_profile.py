@@ -41,6 +41,9 @@ class CatdotProfileTests(unittest.TestCase):
         pacman.write_text(
             "#!/bin/sh\n"
             "if [ \"$1\" = -Qq ]; then cat \"$CATDOT_TEST_INSTALLED\"; exit 0; fi\n"
+            "if [ \"$1\" = -T ]; then shift 2; for package in \"$@\"; do "
+            "grep -Fxq \"$package\" \"$CATDOT_TEST_INSTALLED\" || "
+            "{ printf '%s\\n' \"$package\"; exit 127; }; done; exit 0; fi\n"
             "if [ \"$1\" = -S ]; then exit 0; fi\n"
             "printf 'unexpected pacman invocation: %s\\n' \"$*\" >&2\n"
             "exit 64\n",
