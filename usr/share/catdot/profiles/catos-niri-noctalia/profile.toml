@@ -1,5 +1,5 @@
 schema = 4
-name = "CatOS Niri Noctalia v5"
+name = "CatOS Niri Noctalia"
 description = "Complete CatOS Niri desktop powered by Noctalia"
 
 packages = [
@@ -26,7 +26,7 @@ packages = [
 ]
 
 # Noctalia rewrites .config/niri/noctalia.kdl at runtime, and the files under
-# custom/catos-niri-noctaliav5 are machine/user customizations. They remain
+# custom/catos-niri-noctalia are machine/user customizations. They remain
 # seeds so catdot update never overwrites generated output or local tuning.
 manage = [
   ".config/niri/config.kdl",

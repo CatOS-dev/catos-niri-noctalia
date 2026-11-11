@@ -213,6 +213,6 @@ include optional=true "noctalia/cursor.kdl"
 include optional=true "noctalia/wpblur.kdl"
 
 // Profile-scoped user customizations. These files are seeds, not managed paths.
-include optional=true "custom/catos-niri-noctaliav5/input.kdl"
-include optional=true "custom/catos-niri-noctaliav5/outputs.kdl"
-include optional=true "custom/catos-niri-noctaliav5/rules.kdl"
+include optional=true "custom/catos-niri-noctalia/input.kdl"
+include optional=true "custom/catos-niri-noctalia/outputs.kdl"
+include optional=true "custom/catos-niri-noctalia/rules.kdl"

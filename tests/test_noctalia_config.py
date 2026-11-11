@@ -4,7 +4,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CONFIG = ROOT / "usr/share/catos-niri-noctaliav5/.config/noctalia/config.toml"
+CONFIG = ROOT / "usr/share/catos-niri-noctalia/.config/noctalia/config.toml"
 
 
 class NoctaliaConfigTests(unittest.TestCase):

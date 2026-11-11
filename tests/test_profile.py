@@ -11,7 +11,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE_ID = "catos-niri-noctaliav5"
+PROFILE_ID = "catos-niri-noctalia"
 MANIFEST = ROOT / "usr/share/catdot/profiles" / PROFILE_ID / "profile.toml"
 CONTENT = ROOT / "usr/share" / PROFILE_ID
 
@@ -108,7 +108,7 @@ class CatdotProfileTests(unittest.TestCase):
         self.assertIn(".config/xdg-desktop-portal/niri-portals.conf", managed)
         self.assertNotIn(".config/niri/noctalia.kdl", managed)
         self.assertNotIn(
-            ".config/niri/custom/catos-niri-noctaliav5/outputs.kdl", managed
+            ".config/niri/custom/catos-niri-noctalia/outputs.kdl", managed
         )
         self.assertNotIn(".config/dconf/user", managed)
 
@@ -136,7 +136,7 @@ class CatdotProfileTests(unittest.TestCase):
             managed_portal = home / ".config/xdg-desktop-portal/niri-portals.conf"
             generated_niri_seed = home / ".config/niri/noctalia.kdl"
             output_seed = (
-                home / ".config/niri/custom/catos-niri-noctaliav5/outputs.kdl"
+                home / ".config/niri/custom/catos-niri-noctalia/outputs.kdl"
             )
             dconf_seed = home / ".config/dconf/user"
             for path in (
@@ -174,7 +174,7 @@ class CatdotProfileTests(unittest.TestCase):
             )
             (
                 staged_content
-                / ".config/niri/custom/catos-niri-noctaliav5/outputs.kdl"
+                / ".config/niri/custom/catos-niri-noctalia/outputs.kdl"
             ).write_text(
                 "profile output update\n", encoding="utf-8"
             )
@@ -204,7 +204,7 @@ class CatdotProfileTests(unittest.TestCase):
         manifest = tomllib.loads(MANIFEST.read_text(encoding="utf-8"))
         self.assertNotIn("greetd", manifest["packages"])
         self.assertNotIn("noctalia-greeter", manifest["packages"])
-        self.assertFalse((ROOT / "catos-niri-noctaliav5.install").exists())
+        self.assertFalse((ROOT / "catos-niri-noctalia.install").exists())
         self.assertFalse(any("greetd" in str(path) for path in CONTENT.rglob("*")))
 
     def test_installed_profile_payload_is_readable_by_regular_users(self) -> None:

@@ -9,7 +9,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DCONF_DIR = ROOT / "usr/share/catos-niri-noctaliav5/.config/dconf"
+DCONF_DIR = ROOT / "usr/share/catos-niri-noctalia/.config/dconf"
 ALL_INI = DCONF_DIR / "all.ini"
 USER_DB = DCONF_DIR / "user"
 

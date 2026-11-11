@@ -1,22 +1,29 @@
-# catos-niri-noctaliav5
+# catos-niri-noctalia
 
-Complete CatOS Niri desktop Profile powered by Noctalia v5.
+Complete CatOS Niri desktop Profile powered by Noctalia.
 
 The repository contains the installed Profile tree directly:
 
 ```text
-usr/share/catdot/profiles/catos-niri-noctaliav5/profile.toml
-usr/share/catos-niri-noctaliav5/...
+usr/share/catdot/profiles/catos-niri-noctalia/profile.toml
+usr/share/catos-niri-noctalia/...
 ```
 
 Select the Profile with:
 
 ```sh
-catdot select catos-niri-noctaliav5
+catdot select catos-niri-noctalia
 ```
 
+When upgrading from an earlier Profile ID, the package replacement does not
+rename Catdot's retained selection. Select this Profile explicitly after the
+upgrade. Existing machine-specific Niri overrides stay in their original
+custom directory; copy any needed overrides to
+`~/.config/niri/custom/catos-niri-noctalia/` before selecting this Profile.
+No user files are migrated automatically.
+
 Catdot installs the exact package names declared by the Profile and maps the
-content below `/usr/share/catos-niri-noctaliav5` into the user's HOME. Switching a
+content below `/usr/share/catos-niri-noctalia` into the user's HOME. Switching a
 Profile does not restart applications or the desktop session.
 
 ## Managed configuration
@@ -44,7 +51,7 @@ The Profile owns and refreshes the distribution-maintained configuration:
 Run the following command to explicitly accept a newer installed revision:
 
 ```sh
-catdot update catos-niri-noctaliav5
+catdot update catos-niri-noctalia
 ```
 
 ## Seed configuration
@@ -55,9 +62,9 @@ Important seeds include:
 
 ```text
 .config/niri/noctalia.kdl
-.config/niri/custom/catos-niri-noctaliav5/input.kdl
-.config/niri/custom/catos-niri-noctaliav5/outputs.kdl
-.config/niri/custom/catos-niri-noctaliav5/rules.kdl
+.config/niri/custom/catos-niri-noctalia/input.kdl
+.config/niri/custom/catos-niri-noctalia/outputs.kdl
+.config/niri/custom/catos-niri-noctalia/rules.kdl
 .config/dconf/user
 .config/dconf/all.ini
 .config/xsettingsd/xsettingsd.conf
